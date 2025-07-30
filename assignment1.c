@@ -8,6 +8,7 @@ int main() {
     printf("Enter element to insert: ");
     scanf("%d", &x);
     arr[n] = x;
+    
     n++;
     printf("Array after insertion: ");
     for(int i=0; i<n; i++) printf("%d ", arr[i]);
