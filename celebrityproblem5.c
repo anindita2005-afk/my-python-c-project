@@ -1,0 +1,9 @@
+
+#include <stdio.h>
+int main(){
+    int n;printf("Enter n: ");scanf("%d",&n);
+    int M[n][n];for(int i=0;i<n;i++)for(int j=0;j<n;j++)scanf("%d",&M[i][j]);
+    int a=0,b=n-1;while(a<b){if(M[a][b])a++;else b--;}
+    int c=a;for(int i=0;i<n;i++){if(i!=c&&(M[c][i]||!M[i][c])){printf("No Celebrity\n");return 0;}}
+    printf("Celebrity index=%d\n",c);return 0;
+}
